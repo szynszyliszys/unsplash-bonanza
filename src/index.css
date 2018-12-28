@@ -1,0 +1,158 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #666;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+/*
+ *  I am putting all styles here to not overcomplicate the file structure.
+ *  In a bigger project I would add scss support, autoprefixing, file structure
+ *  with the variables for sizing and colors and many more enhancements.
+ *  I didn't make the project responsive and the styling is very rough.
+ *
+ */
+
+
+/* SearchBar styles */
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  min-height: 500px;
+  padding: 1rem;
+}
+
+.form {
+  display: flex;
+  flex: 0 0 auto;
+  width: 100%;
+}
+
+.form-field__label {
+  display: block;
+  margin: 0.5rem 0;
+}
+
+.form-field__input {
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+.form__submit-btn {
+  align-self: flex-end;
+}
+
+.form-field__input,
+.form__submit-btn {
+  padding: 1rem;
+  font-size: 1em;
+}
+
+.error {
+  position: absolute;
+  line-height: 1.5;
+  padding: 1rem;
+  background: #751414;
+  color: white;
+  font-weight: bold;
+}
+
+/* Main content area styles */
+
+.main-content {
+  flex: 1;
+  display: flex;
+  margin-top: 1rem;
+}
+
+.image-display {
+  flex: 3 1 auto;
+  display: flex;
+  margin-right: 1rem;
+}
+
+.image-display__info-container {
+  flex: 1;
+  height: 100%;
+}
+
+.image-display__info {
+  text-align: center;
+  font-size: 2em;
+  color: #aaa;
+}
+
+.image-display__image {
+  flex: 0;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* Searched Queries aside widget styles */
+
+.searched-queries {
+  flex: 0 0 300px;
+  padding: 1rem;
+  border: 1px solid #ddd;
+}
+
+.searched-queries__list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.searched-queries__list-item {
+  display: flex;
+  justify-content: space-between;
+  line-height: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Utility classes */
+
+.btn {
+  -webkit-appearance: none;
+  -moz-appearance:    none;
+  appearance:         none;
+  transition: background-color 0.5s;
+  background-color: #e74c3c;
+  border: 1px solid #e74c3c;
+  color: white;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+.btn:hover,
+.btn:focus,
+.btn:active {
+  background-color: #c0392b;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+}
